@@ -16,15 +16,8 @@ phases:
       - echo "Current Directory"
       - pwd
       - ls -la
-
       - cd terraform/aws-quick
-
       - terraform init
-      - terraform plan
-
-      - echo "Executing: terraform ${TF_ACTION}"
-      - terraform ${TF_ACTION}
-
-artifacts:
-  files:
-    - '**/*'
+      - terraform plan -out=tfplan
+      - echo Executing Terraform
+      - terraform $TF_ACTION tfplan
