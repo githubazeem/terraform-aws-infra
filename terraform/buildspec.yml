@@ -20,8 +20,9 @@ phases:
       - cd terraform/aws-quick
 
       - terraform init
-      - terraform plan
-      - terraform apply -auto-approve
+
+      - echo "Executing: terraform ${TF_ACTION}"
+      - terraform ${TF_ACTION}
 
 artifacts:
   files:
