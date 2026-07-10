@@ -20,6 +20,7 @@ phases:
       - cd terraform/aws-quick
 
       - terraform init
+      - terraform plan
 
       - echo "Executing: terraform ${TF_ACTION}"
       - terraform ${TF_ACTION}
