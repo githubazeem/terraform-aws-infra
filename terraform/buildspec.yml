@@ -18,6 +18,6 @@ phases:
       - ls -la
       - cd terraform/aws-quick
       - terraform init
-      - terraform plan -out=tfplan
+      - terraform plan
       - echo Executing Terraform
-      - terraform $TF_ACTION tfplan
+      - terraform destroy -auto-approve
