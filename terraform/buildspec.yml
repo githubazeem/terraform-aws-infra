@@ -16,7 +16,7 @@ phases:
       - echo "Current Directory"
       - pwd
       - ls -la
-      - cd terraform/aws-quick
+      - cd terraform/aws
       - terraform init
       - terraform plan
       - echo Executing Terraform
