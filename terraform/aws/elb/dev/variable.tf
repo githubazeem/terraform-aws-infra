@@ -9,8 +9,3 @@ variable "subnetroot" {
   }))
 }
 
-
-
-variable "vpc_id" {
-  type = string
-}
