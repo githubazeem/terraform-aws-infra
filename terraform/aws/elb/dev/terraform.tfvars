@@ -1,4 +1,4 @@
-vpcvar = ["10.0.0.0/16"]
+vpcvar = "10.0.0.0/16"
 subnetroot = {
     subnet-1 = {
       cidr = "10.0.1.0/24"
@@ -9,3 +9,4 @@ subnetroot = {
       az   = "ap-south-1b"
     }
   }
+
