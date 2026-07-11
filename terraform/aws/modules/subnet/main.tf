@@ -10,16 +10,11 @@
 
 # }
 
-variable "subnetchild" {
-  type = map(object({
-    cidr = string
-    az   = string
-  }))
-}
+
 resource "aws_subnet" "subnets" {
   for_each = var.subnetchild
 
-  vpc_id            = aws_vpc.az-vpc.id
+  vpc_id            = var.vpc_id
   cidr_block        = each.value.cidr
   availability_zone = each.value.az
 

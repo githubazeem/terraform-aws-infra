@@ -1,8 +1,4 @@
-variable "vpcvar" {
-  
-}
-
-variable "subnetroot" {
+variable "subnetchild" {
   type = map(object({
     cidr = string
     az   = string
@@ -11,6 +7,10 @@ variable "subnetroot" {
 
 
 
+
 variable "vpc_id" {
   type = string
 }
+
+
+
