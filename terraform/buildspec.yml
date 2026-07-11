@@ -20,4 +20,4 @@ phases:
       - terraform init
       - terraform plan
       - echo Executing Terraform
-      - $DESTROY
+      - $APPLY
