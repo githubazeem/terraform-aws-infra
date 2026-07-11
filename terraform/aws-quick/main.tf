@@ -27,6 +27,6 @@ resource "aws_vpc" "az-vpc" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "quick-vpc"
+    Name = "PUSH-vpc"
   }
 }
