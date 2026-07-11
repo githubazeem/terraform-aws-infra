@@ -8,6 +8,7 @@ module "aws_vpc" {
 module "aws_subnet" {
   depends_on = [module.aws_vpc]
   source = "../../modules/subnet"
+   
   vpc_id   = module.vpc.vpc_id
   subnetchild = var.subnetroot
 }
