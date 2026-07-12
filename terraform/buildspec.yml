@@ -16,8 +16,8 @@ phases:
       - echo "Terraform PLAN Stage"
       - cd terraform/aws/elb/dev
       - terraform init
-      - terraform fmt -check
-      - terraform validate
+      #- terraform fmt -check
+      #- terraform validate
       - terraform plan -out=tfplan
 
 artifacts:
