@@ -13,11 +13,13 @@ phases:
 
   build:
     commands:
-      - echo "Current Directory"
-      - pwd
-      - ls -la
+      - echo "Terraform PLAN Stage"
       - cd terraform/aws/elb/dev
       - terraform init
-      - terraform plan
-      - echo Executing Terraform
-      - $DESTROY
+      - terraform fmt -check
+      - terraform validate
+      - terraform plan -out=tfplan
+
+artifacts:
+  files:
+    - terraform/aws/elb/dev/tfplan
