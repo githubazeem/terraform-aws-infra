@@ -16,4 +16,4 @@ phases:
       - echo "Terraform APPLY Stage"
       - cd terraform/aws/elb/dev
       - terraform init
-      - $A
+      - $D
