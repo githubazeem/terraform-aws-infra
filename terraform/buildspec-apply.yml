@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Terraform..."
+      - curl -LO https://releases.hashicorp.com/terraform/1.12.2/terraform_1.12.2_linux_amd64.zip
+      - mkdir -p /tmp/terraform
+      - unzip -o terraform_1.12.2_linux_amd64.zip -d /tmp/terraform
+      - chmod +x /tmp/terraform/terraform
+      - export PATH=/tmp/terraform:$PATH
+      - terraform version
+
+  build:
+    commands:
+      - echo "Terraform APPLY Stage"
+      - cd terraform/aws/elb/dev
+      - terraform init
+      - $D
